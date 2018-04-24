@@ -1,0 +1,10 @@
+---
+
+- hosts: Machine2
+  roles:
+    - role2
+
+- hosts: Machine3
+  become: true
+  roles:
+    - role3

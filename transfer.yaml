@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  tasks:
+    - name: transfer file
+      copy: src='/home/user/ansibleplaybooks/second.yaml' dest='/home/user/second.yaml'

@@ -1,0 +1,9 @@
+---
+
+- hosts: Machine2
+  tasks: 
+    - name: create directory
+      file: path='/home/user/firstyamldirectory' state=directory
+
+    - name: create file
+      file: path='/home/user/firstyamldirectory/firstyamlfile.txt' state=touch

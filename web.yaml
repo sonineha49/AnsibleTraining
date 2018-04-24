@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks: 
+    - name: install apache
+      apt: name='apache2'
+
+    - name: start apache
+      service: name='apache2' state=started enabled=yes
+
+    - name: update content
+      replace: regexp='Apache2' replace={{ ansible_hostname }} dest='/var/www/html/index.html'

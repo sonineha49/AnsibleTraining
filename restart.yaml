@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name: restart based on uptime
+      when: ansible_uptime_seconds > 10000
+      command: 'shutdown -P'  

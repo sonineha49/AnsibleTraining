@@ -1,0 +1,5 @@
+---
+
+- name: testing role on machine 2
+  file: path='/home/user/role2.txt' state=touch
+
